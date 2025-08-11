@@ -21,7 +21,7 @@ const App = () => {
   async function reviewCode() {
     setReviewing(true); // Show loading state
     try {
-      const response = await axios.post("http://localhost:3000/review-code", {
+      const response = await axios.post("https://code-reviewer-backend-pdet.onrender.com", {
         code,
       });
       setReview(response.data.review);
