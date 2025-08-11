@@ -6,7 +6,7 @@ import Editor from "react-simple-code-editor";
 import Markdown from "react-markdown";
 import rehypeHighlight from "https://esm.sh/rehype-highlight@6";
 import "highlight.js/styles/github-dark.css";
-import "./app.css";
+import "./App.css";
 
 const App = () => {
   const [code, setCode] = useState(`function sum(){
