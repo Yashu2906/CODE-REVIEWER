@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import { reviewCode } from "./services/ai.service.js";
+const PORT = process.env.PORT || 3000;
 
 dotenv.config();
 const app = express();
@@ -21,6 +22,6 @@ app.post("/review-code", async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("✅ Server is running on http://localhost:3000");
 });
