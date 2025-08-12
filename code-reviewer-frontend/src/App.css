@@ -81,6 +81,7 @@ main {
 }
 
 /* Mobile view: stack the sections vertically */
+/* Mobile view: stack the sections vertically */
 @media (max-width: 768px) {
   main {
     flex-direction: column;
@@ -91,6 +92,7 @@ main {
     flex-basis: auto;
     height: auto;
     width: 100%;
+    overflow: visible; /* Allow content to expand naturally */
   }
 
   /* Optional: add some spacing between stacked sections */
@@ -105,4 +107,11 @@ main {
     bottom: auto;
     margin: 1rem auto;
   }
+
+  /* Enable scrolling on mobile view */
+  html, body, #root {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+  }
 }
+
